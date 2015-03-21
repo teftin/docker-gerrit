@@ -7,8 +7,8 @@ RUN apt-get update
 
 RUN apt-get install -y openjdk-7-jre-headless gitweb lynx-cur git augeas-tools
 
-ADD https://gerrit-releases.storage.googleapis.com/gerrit-2.10.war /
-RUN java -jar /gerrit-2.10.war init --batch --no-auto-start --site-path /gerrit-app
+ADD https://gerrit-releases.storage.googleapis.com/gerrit-2.10.1.war /
+RUN java -jar /gerrit-2.10.1.war init --batch --no-auto-start --site-path /gerrit-app
 
 ADD run.sh /run.sh
 

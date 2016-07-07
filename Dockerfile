@@ -3,8 +3,8 @@ MAINTAINER Stan <teftin@gmail.com>
 
 RUN apk -U add bash openjdk8-jre git-gitweb perl-cgi git
 
-ADD https://www.gerritcodereview.com/download/gerrit-2.12.war /
-RUN java -jar /gerrit-2.12.war init --batch --no-auto-start \
+ADD https://www.gerritcodereview.com/download/gerrit-2.12.2.war /
+RUN java -jar /gerrit-2.12.2.war init --batch --no-auto-start \
   --site-path /gerrit-app \
   --install-plugin replication \
   --install-plugin reviewnotes \
